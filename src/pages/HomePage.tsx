@@ -33,7 +33,7 @@ export default function HomePage() {
   const thisMonthDays = new Set(entries.filter((e) => e.date.startsWith(thisMonthKey)).map((e) => e.date)).size
 
   return (
-    <div className="max-w-md mx-auto px-4 pb-24 fade-up">
+    <main className="max-w-md mx-auto px-4 pb-24 fade-up">
       {/* Header */}
       <div className="flex items-center justify-between py-4">
         <h1 className="text-xl font-bold" style={{ color: 'var(--accent)' }}>きろく</h1>
@@ -75,9 +75,15 @@ export default function HomePage() {
       {/* Timeline */}
       {entries.length === 0 ? (
         <div className="text-center py-16" style={{ color: 'var(--text-sub)' }}>
-          <p className="text-4xl mb-3">📖</p>
+          <p className="text-4xl mb-3" aria-hidden="true">📖</p>
           <p className="text-sm">まだ記録がありません</p>
-          <p className="text-xs mt-1">下のボタンから記録しましょう</p>
+          <Link
+            to="/new"
+            className="inline-block mt-4 px-6 py-3 rounded-2xl text-sm font-bold"
+            style={{ background: 'var(--accent)', color: '#0F1117' }}
+          >
+            最初の記録を追加 +
+          </Link>
         </div>
       ) : (
         <div className="flex flex-col gap-6">
@@ -160,11 +166,12 @@ export default function HomePage() {
       {/* FAB */}
       <Link
         to="/new"
+        aria-label="新しい記録を追加"
         className="fixed bottom-20 right-5 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg"
         style={{ background: 'var(--accent)', color: '#0F1117' }}
       >
-        +
+        <span aria-hidden="true">+</span>
       </Link>
-    </div>
+    </main>
   )
 }

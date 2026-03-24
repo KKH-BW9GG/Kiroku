@@ -18,12 +18,13 @@ export default function BottomNav() {
           key={item.to}
           to={item.to}
           end={item.to === '/'}
+          aria-label={item.label}
           className="flex flex-col items-center gap-0.5 px-4 py-1 rounded-xl text-xs transition-all"
           style={({ isActive }) => ({
             color: isActive ? 'var(--accent)' : 'var(--text-sub)',
           })}
         >
-          <span className="text-xl">{item.icon}</span>
+          <span className="text-xl" aria-hidden="true">{item.icon}</span>
           <span>{item.label}</span>
         </NavLink>
       ))}
