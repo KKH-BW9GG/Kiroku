@@ -1,4 +1,4 @@
-const CACHE = 'kiroku-v1'
+const CACHE = 'kiroku-v2'
 const PRECACHE = ['/', '/index.html']
 
 self.addEventListener('install', e => {

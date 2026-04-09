@@ -2,15 +2,63 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>きろく — 友達との思い出を記録するアプリ</title>
+    <meta name="description" content="誰と、どこで、何をしたか5秒で記録。友達との思い出を振り返り、最後に会った日や月ごとの統計も確認できる日記アプリ。" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kiroku.khaoslogik.com/" />
+
+    <!-- OGP -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://kiroku.khaoslogik.com/" />
+    <meta property="og:title"       content="きろく — 友達との思い出を記録するアプリ" />
+    <meta property="og:description" content="誰と、どこで、何をしたか5秒で記録。友達との思い出を振り返り、最後に会った日や月ごとの統計も確認できる日記アプリ。" />
+    <meta property="og:image"       content="https://kiroku.khaoslogik.com/og-image.png" />
+    <meta property="og:locale"      content="ja_JP" />
+    <meta property="og:site_name"   content="きろく" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="きろく — 友達との思い出を記録するアプリ" />
+    <meta name="twitter:description" content="誰と、どこで、何をしたか5秒で記録。友達との思い出を振り返る日記アプリ。" />
+    <meta name="twitter:image"       content="https://kiroku.khaoslogik.com/og-image.png" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "きろく",
+      "url": "https://kiroku.khaoslogik.com/",
+      "description": "誰と、どこで、何をしたか5秒で記録。友達との思い出を振り返る日記アプリ。",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+      "inLanguage": "ja"
+    }
+    </script>
+
+    <!-- PWA / Theme -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0F1117" />
+    <meta name="theme-color" content="#FAFAF7" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="きろく" />
-    <title>きろく</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Vercel subdomain redirect: keep custom domain as canonical -->
+    <script>
+      if (location.hostname.endsWith('.vercel.app')) {
+        location.replace('https://kiroku.khaoslogik.com' + location.pathname + location.search + location.hash);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
